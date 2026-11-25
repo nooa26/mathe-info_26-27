@@ -7,22 +7,12 @@
 
     <title>Quadratische Funktionen</title>
 
-    <style>
-        body {
-            background-color: rgb(245, 245, 255);
-            font-family: Arial, sans-serif;
-            margin: 30px;
-        }
-
-        #ggb-element {
-            width: 100%;
-            max-width: 1000px;
-            height: 650px;
-            margin: 20px auto;
-        }
-    </style>
 
     <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.js"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+    </script>
 </head>
 
 <body>
@@ -30,17 +20,18 @@
     <h1>Grundsatz</h1>
 
     <p>
-        Eine quadratische Funktion basiert auf einer
-        quadrierten Variable:
+        Eine quadratische Funktion basiert auf einer quadrierten Variable.
+        Wenn man das in einem Koordinatensystem darstellt, erhält man eine Normalparabel:
     </p>
+    <p>\[f(x) = x^2\]</p>
 
-    <div id="ggb-element"></div>
+    <div id="ggb1"></div>
 
     <script>
         var params = {
             appName: "classic",
-            width: 1000,
-            height: 650,
+            width: window.innerWidth,
+            height:400,
             showToolBar: false,
             showMenuBar: false,
             showAlgebraInput: true,
@@ -51,7 +42,7 @@
         var applet = new GGBApplet(params, true);
 
         window.addEventListener("load", function() {
-            applet.inject("ggb-element");
+            applet.inject("ggb1");
         });
     </script>
 

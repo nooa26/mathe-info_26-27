@@ -1,14 +1,56 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <style>
-        body {
-            background-color: brown;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quadratische Funktionen</title>
+
+
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.js"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+    </script>
 </head>
+
 <body>
-    <h1>Das ist Seite 2</h1>
+
+    <h1>Scheitelpunktform</h1>
+
+    <p>
+        Um diese Parabel entlang der X-Achse zu verschieben, muss man x mit d subtrahieren, 
+        und das Ergebnis davon quadrieren:
+    </p>
+    <p>\[f(x) = (x-d)^2\]</p>
+    <p>
+        Für eine Verschiebung entlang der Y-Achse muss man nach dem Quadrieren e addieren:
+    </p>
+    <p>\[f(x) = (x-d)^2+e\]</p>
+    <p>Der Scheitelpunkt S lässt sich so beschreiben:</p>
+    <p>\[S(d|e)\]</p>
+    <div id="ggb2"></div>
+
+    <script>
+        var params = {
+            appName: "classic",
+            width: window.innerWidth,
+            height: 500,
+            showToolBar: false,
+            showMenuBar: false,
+            showAlgebraInput: false,
+            showResetIcon: true,
+            filename: "./ggb/2.ggb"
+        };
+
+        var applet = new GGBApplet(params, true);
+
+        window.addEventListener("load", function() {
+            applet.inject("ggb2");
+        });
+    </script>
+
 </body>
 </html>
+
