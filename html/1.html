@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quadratische Funktionen</title>
+
+    <style>
+        body {
+            background-color: rgb(245, 245, 255);
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        #ggb-element {
+            width: 100%;
+            max-width: 1000px;
+            height: 650px;
+            margin: 20px auto;
+        }
+    </style>
+
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+</head>
+
+<body>
+
+    <h1>Grundsatz</h1>
+
+    <p>
+        Eine quadratische Funktion basiert auf einer
+        quadrierten Variable:
+    </p>
+
+    <div id="ggb-element"></div>
+
+    <script>
+        var params = {
+            appName: "classic",
+            width: 1000,
+            height: 650,
+            showToolBar: false,
+            showMenuBar: false,
+            showAlgebraInput: true,
+            showResetIcon: true,
+            filename: "./ggb/1.ggb"
+        };
+
+        var applet = new GGBApplet(params, true);
+
+        window.addEventListener("load", function() {
+            applet.inject("ggb-element");
+        });
+    </script>
+
+</body>
+</html>
